@@ -54,12 +54,12 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "terser": "^5.48.0",
-    "typescript": "^5.9.3",
+    "typescript": "^7.0.2",
     "unified": "^11.0.5",
     "vite": "^8.1.0",
     "vite-plugin-dynamic-base": "^1.3.0",
     "vite-plugin-solid": "^2.11.12",
-    "vite-plugin-static-copy": "^3.4.0"
+    "vite-plugin-static-copy": "^4.1.1"
   },
   "dependencies": {
     "@egjs/view360": "4.0.0-beta.7",
@@ -82,9 +82,9 @@
     "bencode": "^4.0.0",
     "chardet": "^2.2.0",
     "clsx": "^2.1.1",
-    "copy-to-clipboard": "^3.3.3",
+    "copy-to-clipboard": "^4.0.2",
     "crypto-js": "^4.2.0",
-    "docx-preview": "^0.3.7",
+    "docx-preview": "^0.4.0",
     "handlebars": "^4.7.9",
     "hash-wasm": "^4.12.0",
     "highlight.js": "^11.11.1",
