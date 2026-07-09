@@ -13,6 +13,7 @@ const instance = axios.create({
 
 instance.interceptors.request.use(
   (config) => {
+    config.headers["X-User-Frontend"] = import.meta.env.VITE_USER_Frontend
     // do something before request is sent
     return config
   },
