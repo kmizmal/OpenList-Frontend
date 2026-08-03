@@ -41,13 +41,14 @@ const Login = () => {
     return `${t("login.login_to")} ${getSetting("site_title")}`
   })
   useTitle(title)
+  // 清理旧版误存的密码
+  localStorage.removeItem("password")
+
   const bgColor = useColorModeValue("white", "$neutral1")
   const [username, setUsername] = createSignal(
     localStorage.getItem("username") || "",
   )
-  const [password, setPassword] = createSignal(
-    localStorage.getItem("password") || "",
-  )
+  const [password, setPassword] = createSignal("")
   const [opt, setOpt] = createSignal("")
   const [useauthn, setuseauthn] = createSignal(false)
   const [remember, setRemember] = createStorageSignal("remember-pwd", "false")
@@ -189,10 +190,8 @@ const Login = () => {
     if (!useauthn()) {
       if (remember() === "true") {
         localStorage.setItem("username", username())
-        localStorage.setItem("password", password())
       } else {
         localStorage.removeItem("username")
-        localStorage.removeItem("password")
       }
       const resp = await data()
       handleRespWithoutAuthAndNotify(
